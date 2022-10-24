@@ -278,6 +278,28 @@ async def tektag(event):
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
     if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
 
+  
+  if mode == "text_on_reply":
+    anlik_calisan.append(event.chat_id)
+ 
+    usrnum = 0
+    usrtxt = ""
+    async for usr in client.iter_participants(event.chat_id, aggressive=False):
+      rxyzdev_tagTot[event.chat_id] += 1
+      usrnum += 1
+      usrtxt += f"\n↬ - [{usr.first_name}](tg://user?id={usr.id}) "
+      if event.chat_id not in anlik_calisan:
+        return
+      if usrnum == 1:
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg)
+        await asyncio.sleep(2)
+        usrnum = 0
+        usrtxt = ""
+     
+    sender = await event.get_sender()
+    rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
+#######################
 #tektak bitiş###########
 # Emoji ile etiketleme modülü
 
@@ -343,7 +365,28 @@ async def etag(event):
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
     if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
 
-    
+  
+  if mode == "text_on_reply":
+    anlik_calisan.append(event.chat_id)
+ 
+    usrnum = 0
+    usrtxt = ""
+    async for usr in client.iter_participants(event.chat_id, aggressive=False):
+      rxyzdev_tagTot[event.chat_id] += 1
+      usrnum += 1
+      usrtxt += f"\n↬ - [{usr.first_name}](tg://user?id={usr.id}) "
+      if event.chat_id not in anlik_calisan:
+        return
+      if usrnum == 5:
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg)
+        await asyncio.sleep(2)
+        usrnum = 0
+        usrtxt = ""
+     
+    sender = await event.get_sender()
+    rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
+#######################
 
 ##########emoji bitiş###############
 @client.on(events.NewMessage(pattern="^/atag ?(.*)"))
