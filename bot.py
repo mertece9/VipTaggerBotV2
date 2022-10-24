@@ -260,6 +260,7 @@ async def tektag(event):
     usrtxt = ""
     await event.respond(f"**ᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ʙᴀꜱʟᴀᴛɪʟᴅɪ.!**")
     async for usr in client.iter_participants(event.chat_id):
+      rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
@@ -324,6 +325,7 @@ async def etag(event):
     usrtxt = ""
     await event.respond(f"**ᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ʙᴀꜱʟᴀᴛɪʟᴅɪ.!**")
     async for usr in client.iter_participants(event.chat_id):
+      rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
