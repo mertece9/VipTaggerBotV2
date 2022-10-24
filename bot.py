@@ -148,6 +148,18 @@ async def handler(event):
                     ),
                     link_preview=False)
 
+@client.on(events.NewMessage(pattern="^/reklam$"))
+async def help(event):
+  helptext = "**📝 ᴠɪᴘ ᴛᴀɢɢᴇʀ ᴋᴏᴍᴜᴛʟᴀʀɪ\n\n» /all < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ 5-ʟɪ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /tektag  < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ᴛᴇᴋ ᴛᴇᴋ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ . . !\n» /cancel => ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪɴɪ ᴅᴜʀᴅᴜʀᴜʀ . . !\n\n✵ ʙɪʀ ᴄᴏᴋ ᴏᴢᴇʟʟɪɢᴇ sᴀʜɪᴘ @VipTaggerBot 'ᴜ ɢʀᴜʙᴜɴᴜᴢᴀ ʀᴀʜᴀᴛʟɪᴋʟᴀ ᴇᴋʟᴇʏɪᴘ ᴋᴜʟʟᴀɴᴀʙɪʟɪʀsɪɴɪᴢ . . ! **"
+  await event.reply(helptext,
+                    buttons=(
+                      [Button.url('🎉  𝗕𝗼𝘁𝘂 𝗚𝗿𝘂𝗯𝗮 𝗘𝗸𝗹𝗲  🎉', 'https://t.me/VipTaggerBot?startgroup=a')],
+                    ),
+                    link_preview=False
+                   )
+	
+	
+
 
 @client.on(events.NewMessage())
 async def mentionalladmin(event):
@@ -596,85 +608,7 @@ async def rtag(event):
     
 #############renk bitiş############
 
- #  güzel isimler.başlangıç modulu..!!!  
- cumle = ('Üzümlü kekim ✨', 'Nar çiçeği ✨', 'Papatya 🌼', 'Karanfil ✨', 'Gül 🌹', 'Ayıcık 🐻', 'Mutlu pandam 🐼', 'Ay parem ✨', 'Ballı lokmam ✨', 'Bebişim 🥰', 'Lale 🌷', 'Zambak ⚜', 'Nergis ✨', 'Sümbül ☘️', 'Nilüfer ☘️', 'Menekşe ⚜️', 'Lavanta ✨', 'Gül pare ✨', 'Reyhan 🌷', 'Kaktüs ⚜️', 'Böğürtlen ☘️', 'Orkide ☘️', 'Manolya ✨', 'Ayçiçeği ✨', 'Tweety ⚜️', 'Star ✨', 'Yonca 🍀', 'Ateş böceği ✨', '❤️kalbimin sahibi',) 
  
-@client.on(events.NewMessage(pattern="^/gtag ?(.*)")) 
- async def gtag(event): 
-   global anlik_calisan 
-   rxyzdev_tagTot[event.chat_id] = 0
-   if event.is_private: 
-     return await event.respond("Bu komut gruplarda ve kanallarda kullanılabilir.!") 
-    
-   admins = [] 
-   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins): 
-     admins.append(admin.id) 
-   if not event.sender_id in admins: 
-     return await event.respond("Yalnızca yöneticiler hepsinden bahsedebilir!") 
-    
-   if event.pattern_match.group(1): 
-     mode = "text_on_cmd" 
-     msg = event.pattern_match.group(1) 
-   elif event.reply_to_msg_id: 
-     mode = "text_on_reply" 
-     msg = event.reply_to_msg_id 
-     if msg == None: 
-         return await event.respond("Eski mesajlar için üyelerden bahsedemem! (gruba eklemeden önce gönderilen mesajlar)") 
-   elif event.pattern_match.group(1) and event.reply_to_msg_id: 
-     return await event.respond("Bana bir argüman ver!") 
-   else: 
-     return await event.respond("Bir mesajı yanıtlayın veya başkalarından bahsetmem için bana bir metin verin!") 
-    
-   if mode == "text_on_cmd": 
-    anlik_calisan.append(event.chat_id)
-    usrnum = 0
-    usrtxt = ""
-    await event.respond(f"**ᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ʙᴀꜱʟᴀᴛɪʟᴅɪ.!**")
-     async for usr in client.iter_participants(event.chat_id): 
- 	   rxyzdev_tagTot[event.chat_id] += 1
-       usrnum += 1 
-       usrtxt += f"[{random.choice(cumle)}](tg://user?id={usr.id}) " 
-       if event.chat_id not in anlik_calisan: 
-         await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌") 
-         return 
-       if usrnum == 5: 
-         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}") 
-         await asyncio.sleep(2) 
-         usrnum = 0 
-         usrtxt = "" 
-  
-
-    sender = await event.get_sender()
-    rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
-      
-    
-   if mode == "text_on_reply": 
-     anlik_calisan.append(event.chat_id) 
-   
-     usrnum = 0 
-     usrtxt = "" 
-     async for usr in client.iter_participants(event.chat_id):
- 	   rxyzdev_tagTot[event.chat_id] += 1 
-       usrnum += 1 
-       usrtxt += f"[{random.choice(cumle)}](tg://user?id={usr.id}) " 
-       if event.chat_id not in anlik_calisan: 
-         await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌") 
-         return 
-       if usrnum == 5: 
-         await client.send_message(event.chat_id, usrtxt, reply_to=msg) 
-         await asyncio.sleep(2) 
-         usrnum = 0 
-         usrtxt = "" 
-
-     
-    sender = await event.get_sender()
-    rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
-
-
-
- #  güzel isimler.bitiş..!!! 
 @client.on(events.NewMessage(pattern="^/atag ?(.*)"))
 async def mentionalladmin(event):
   global anlik_calisan
