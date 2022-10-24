@@ -657,7 +657,7 @@ async def rtag(event):
      async for usr in client.iter_participants(event.chat_id):
  	   rxyzdev_tagTot[event.chat_id] += 1 
        usrnum += 1 
-       usrtxt += f"[{random.choice(emj)}](tg://user?id={usr.id}) " 
+       usrtxt += f"[{random.choice(cumle)}](tg://user?id={usr.id}) " 
        if event.chat_id not in anlik_calisan: 
          await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌") 
          return 
