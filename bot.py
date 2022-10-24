@@ -69,30 +69,30 @@ rxyzdev_tagTot = {}
 rxyzdev_initT = {}
 
 
-@client.on(events.NewMessage(pattern="^/start$"))
-async def info(event):
-  await event.reply("**ᴍᴇʀʜᴀʙᴀ ɢʀᴜᴘʟᴀʀɪɴɪᴢᴅᴀ Üʏᴇʟᴇʀɪ ᴇᴛɪᴋᴇᴛʟᴇᴍᴇᴋ ɪÇɪɴ ʏᴀʀᴀᴛɪʟᴍɪŞɪᴍ**",
-                    buttons=(
-                      [
-                       Button.url('ʙᴇɴɪ ɢʀᴜʙᴜɴᴀ ᴇᴋʟᴇ ➕', 'https://t.me/VipTaggerBot?startgroup=a')
-                      ],
-                      [
-                       Button.url('📢 ᴋᴀɴᴀʟ', 'https://t.me/ProTubeSupport'),
-                       Button.url('🇹🇷 ꜱᴀʜɪʙɪᴍ', 'https://t.me/TMertTt')
-                      ],
-                      [
-                       Button.url('🧑🏻‍💻 ɢɪᴛʜᴜʙ ᴋᴀʏɴᴀᴋ ᴋᴏᴅᴜ 🧑🏻‍💻', 'https://github.com/')
-                      ],
-                    ),
-                    link_preview=False
-                   )
+#@client.on(events.NewMessage(pattern="^/start$"))
+#async def info(event):
+#  await event.reply("**ᴍᴇʀʜᴀʙᴀ ɢʀᴜᴘʟᴀʀɪɴɪᴢᴅᴀ Üʏᴇʟᴇʀɪ ᴇᴛɪᴋᴇᴛʟᴇᴍᴇᴋ ɪÇɪɴ ʏᴀʀᴀᴛɪʟᴍɪŞɪᴍ**",
+#                    buttons=(
+##                      [
+#                       Button.url('ʙᴇɴɪ ɢʀᴜʙᴜɴᴀ ᴇᴋʟᴇ ➕', 'https://t.me/VipTaggerBot?startgroup=a')
+#                      ],
+##                      [
+#                       Button.url('📢 ᴋᴀɴᴀʟ', 'https://t.me/ProTubeSupport'),
+#                       Button.url('🇹🇷 ꜱᴀʜɪʙɪᴍ', 'https://t.me/TMertTt')
+#                      ],
+#                      [
+#                       Button.url('🧑🏻‍💻 ɢɪᴛʜᴜʙ ᴋᴀʏɴᴀᴋ ᴋᴏᴅᴜ 🧑🏻‍💻', 'https://github.com/')
+#                      ],
+#                    ),
+#                    link_preview=False
+#                   )
 
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"❌**ᴇᴛɪᴋᴇᴛ ɪŞʟᴇᴍɪ ᴅᴜʀᴅᴜʀᴜʟᴅᴜ.\n\n ᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}**")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"❌**ᴇᴛɪᴋᴇᴛ ɪŞʟᴇᴍɪ ᴅᴜʀᴅᴜʀᴜʟᴅᴜ.\n\n ᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ᴅᴜʀᴅᴜʀᴀɴ: {rxyzdev_initT}**")
 
 
 @client.on(events.NewMessage(pattern="^/start$"))
@@ -141,7 +141,7 @@ async def handler(event):
 # gece kusu
 @client.on(events.callbackquery.CallbackQuery(data="komutlar"))
 async def handler(event):
-    await event.edit(f"**📝 ᴠɪᴘ ᴛᴀɢɢᴇʀ ᴋᴏᴍᴜᴛʟᴀʀɪ\n\n» /all < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ 5-ʟɪ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /tektag  < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ᴛᴇᴋ ᴛᴇᴋ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ . . !\n» /etag < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ᴇᴍᴏᴊɪʟᴇʀ ɪʟᴇ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /stag < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ɢᴜᴢᴇʟ ꜱᴏᴢʟᴇʀ ɪʟᴇ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /rtag < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ʀᴇɴᴋʟᴇʀ ɪʟᴇ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /atag < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴀᴅᴍɪɴʟᴇʀᴇ/ʏᴏɴᴇᴛɪᴄɪʟᴇʀᴇ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /cancel => ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪɴɪ ᴅᴜʀᴅᴜʀᴜʀ . . !\n\n❕ ʏᴀʟɴɪᴢᴄᴀ ʏᴏɴᴇᴛɪᴄɪʟᴇʀɪ ʙᴜ ᴋᴏᴍᴜᴛʟᴀʀɪ ᴋᴜʟʟᴀɴᴀʙɪʟɪʀ.**", buttons=(
+    await event.edit(f"**📝 ᴠɪᴘ ᴛᴀɢɢᴇʀ ᴋᴏᴍᴜᴛʟᴀʀɪ\n\n» /all < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ 5-ʟɪ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /tektag  < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ᴛᴇᴋ ᴛᴇᴋ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ . . !\n» /etag < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ᴇᴍᴏᴊɪʟᴇʀ ɪʟᴇ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /stag < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ɢᴜᴢᴇʟ ꜱᴏᴢʟᴇʀ ɪʟᴇ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /gisimtag < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ɢᴜᴢᴇʟ ɪꜱɪᴍʟᴇʀ ɪʟᴇ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /rtag < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ʀᴇɴᴋʟᴇʀ ɪʟᴇ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /atag < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴀᴅᴍɪɴʟᴇʀᴇ/ʏᴏɴᴇᴛɪᴄɪʟᴇʀᴇ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /cancel => ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪɴɪ ᴅᴜʀᴅᴜʀᴜʀ . . !\n\n❕ ʏᴀʟɴɪᴢᴄᴀ ʏᴏɴᴇᴛɪᴄɪʟᴇʀɪ ʙᴜ ᴋᴏᴍᴜᴛʟᴀʀɪ ᴋᴜʟʟᴀɴᴀʙɪʟɪʀ.**", buttons=(
                       [
                       Button.inline("◀️ Geri", data="start")
                       ]
@@ -150,7 +150,7 @@ async def handler(event):
 
 @client.on(events.NewMessage(pattern="^/reklam$"))
 async def help(event):
-  helptext = "**📝 ᴠɪᴘ ᴛᴀɢɢᴇʀ ᴋᴏᴍᴜᴛʟᴀʀɪ\n\n» /all < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ 5-ʟɪ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /tektag  < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ᴛᴇᴋ ᴛᴇᴋ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ . . !\n» /etag < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ᴇᴍᴏᴊɪʟᴇʀ ɪʟᴇ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /stag < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ɢᴜᴢᴇʟ ꜱᴏᴢʟᴇʀ ɪʟᴇ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /rtag < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ʀᴇɴᴋʟᴇʀ ɪʟᴇ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /atag < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴀᴅᴍɪɴʟᴇʀᴇ/ʏᴏɴᴇᴛɪᴄɪʟᴇʀᴇ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /cancel => ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪɴɪ ᴅᴜʀᴅᴜʀᴜʀ . . !\n\n✵ ʙɪʀ ᴄᴏᴋ ᴏᴢᴇʟʟɪɢᴇ sᴀʜɪᴘ @VipTaggerBot 'ᴜ ɢʀᴜʙᴜɴᴜᴢᴀ ʀᴀʜᴀᴛʟɪᴋʟᴀ ᴇᴋʟᴇʏɪᴘ ᴋᴜʟʟᴀɴᴀʙɪʟɪʀsɪɴɪᴢ . . ! **"
+  helptext = "**📝 ᴠɪᴘ ᴛᴀɢɢᴇʀ ᴋᴏᴍᴜᴛʟᴀʀɪ\n\n» /all < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ 5-ʟɪ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /tektag  < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ᴛᴇᴋ ᴛᴇᴋ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ . . !\n» /etag < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ᴇᴍᴏᴊɪʟᴇʀ ɪʟᴇ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /stag < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ɢᴜᴢᴇʟ ꜱᴏᴢʟᴇʀ ɪʟᴇ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /gisimtag < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ɢᴜᴢᴇʟ ɪꜱɪᴍʟᴇʀ ɪʟᴇ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /rtag < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴋᴜʟʟᴀɴɪᴄɪʟᴀʀᴀ ʀᴇɴᴋʟᴇʀ ɪʟᴇ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /atag < ᴍᴇsᴀᴊɪɴɪᴢ > => ɢʀᴜʙᴛᴀᴋɪ ᴀᴅᴍɪɴʟᴇʀᴇ/ʏᴏɴᴇᴛɪᴄɪʟᴇʀᴇ ᴇᴛɪᴋᴇᴛ ᴀᴛᴀʀ .  .  !\n» /cancel => ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪɴɪ ᴅᴜʀᴅᴜʀᴜʀ . . !\n\n✵ ʙɪʀ ᴄᴏᴋ ᴏᴢᴇʟʟɪɢᴇ sᴀʜɪᴘ @VipTaggerBot 'ᴜ ɢʀᴜʙᴜɴᴜᴢᴀ ʀᴀʜᴀᴛʟɪᴋʟᴀ ᴇᴋʟᴇʏɪᴘ ᴋᴜʟʟᴀɴᴀʙɪʟɪʀsɪɴɪᴢ . . ! **"
   await event.reply(helptext,
                     buttons=(
                       [Button.url('🎉  𝗕𝗼𝘁𝘂 𝗚𝗿𝘂𝗯𝗮 𝗘𝗸𝗹𝗲  🎉', 'https://t.me/VipTaggerBot?startgroup=a')],
@@ -211,7 +211,7 @@ async def mentionall(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n↬ - [{usr.first_name}](tg://user?id={usr.id}) "
+      usrtxt += f"\n📣 - [{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -232,7 +232,7 @@ async def mentionall(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n↬ - [{usr.first_name}](tg://user?id={usr.id}) "
+      usrtxt += f"\n📣 - [{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -281,7 +281,7 @@ async def tektag(event):
     async for usr in client.iter_participants(event.chat_id):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
+      usrtxt += f"📣 [{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         await event.respond("⛔ ᴛᴇᴋᴇʀ ᴛᴇᴋᴇʀ ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪꜱʟᴇᴍɪ ᴅᴜʀᴅᴜʀᴜʟᴅᴜ",
                     
@@ -306,7 +306,7 @@ async def tektag(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n↬ - [{usr.first_name}](tg://user?id={usr.id}) "
+      usrtxt += f"📣 [{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 1:
@@ -369,7 +369,7 @@ async def etag(event):
     async for usr in client.iter_participants(event.chat_id):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
+      usrtxt += f"📣 [{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         await event.respond("⛔ ᴇᴍᴏᴊɪ ɪʟᴇ ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪꜱʟᴇᴍɪ ᴅᴜʀᴅᴜʀᴜʟᴅᴜ",
                     
@@ -394,7 +394,7 @@ async def etag(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n↬ - [{usr.first_name}](tg://user?id={usr.id}) "
+      usrtxt += f"📣 [{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -494,7 +494,7 @@ async def stag(event):
     async for usr in client.iter_participants(event.chat_id):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"[{random.choice(soz)}](tg://user?id={usr.id}) "
+      usrtxt += f"📣 [{random.choice(soz)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         await event.respond("⛔ Söz ile etiketleme işlemi durduruldu",
                     
@@ -519,7 +519,7 @@ async def stag(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n↬ - [{usr.first_name}](tg://user?id={usr.id}) "
+      usrtxt += f"📣 [{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 1:
@@ -573,7 +573,7 @@ async def rtag(event):
     async for usr in client.iter_participants(event.chat_id):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"[{random.choice(renk)}](tg://user?id={usr.id}) "
+      usrtxt += f"📣 [{random.choice(renk)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         await event.respond("⛔ Renk ile etiketleme işlemi durduruldu",
                     
@@ -598,7 +598,7 @@ async def rtag(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n↬ - [{usr.first_name}](tg://user?id={usr.id}) "
+      usrtxt += f"\n📣 [{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 3:
@@ -653,7 +653,7 @@ async def gisimtag(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"[{random.choice(gisim)}](tg://user?id={usr.id}) "
+      usrtxt += f"📣 [{random.choice(gisim)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 1:
@@ -674,7 +674,7 @@ async def gisimtag(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"[{random.choice(gisim)}](tg://user?id={usr.id})"
+      usrtxt += f"📣 [{random.choice(gisim)}](tg://user?id={usr.id})"
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 1:
