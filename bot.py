@@ -214,7 +214,7 @@ async def mentionall(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n👤 - [{usr.first_name}](tg://user?id={usr.id}) "
+      usrtxt += f"\n↬ - [{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -260,7 +260,7 @@ async def mentionalladmin(event):
   
     async for usr in client.iter_participants(event.chat_id,filter=ChannelParticipantsAdmins):
       usrnum += 1
-      usrtxt += f"\n**👤 - [{usr.first_name}](tg://user?id={usr.id}) **"
+      usrtxt += f"\n**↬ - [{usr.first_name}](tg://user?id={usr.id}) **"
       if event.chat_id not in anlik_calisan:
         await event.respond("**Etiket İşlemi Bitti.!**")
         return
@@ -278,7 +278,7 @@ async def mentionalladmin(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id,filter=ChannelParticipantsAdmins):
       usrnum += 1
-      usrtxt += f"\n**👤 - [{usr.first_name}](tg://user?id={usr.id}) **"
+      usrtxt += f"\n**↬ - [{usr.first_name}](tg://user?id={usr.id}) **"
       if event.chat_id not in anlik_calisan:
         await event.respond("**İşlem Durduruldu.!**")
         return
