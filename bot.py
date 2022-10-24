@@ -92,7 +92,14 @@ async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"❌**ᴇᴛɪᴋᴇᴛ ɪŞʟᴇᴍɪ ᴅᴜʀᴅᴜʀᴜʟᴅᴜ.\n\n ᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ᴅᴜʀᴅᴜʀᴀɴ: {rxyzdev_initT}**")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"❌**ᴇᴛɪᴋᴇᴛ ɪŞʟᴇᴍɪ ᴅᴜʀᴅᴜʀᴜʟᴅᴜ.\n\n ᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}**")
+
+#tektag
+@client.on(events.NewMessage(pattern='^(?i)/dur'))
+async def cancel(event):
+  global anlik_calisan
+  anlik_calisan.remove(event.chat_id)
+
 
 
 @client.on(events.NewMessage(pattern="^/start$"))
@@ -211,7 +218,7 @@ async def mentionall(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n📣 - [{usr.first_name}](tg://user?id={usr.id}) "
+      usrtxt += f"📣 - [{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -232,7 +239,7 @@ async def mentionall(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n📣 - [{usr.first_name}](tg://user?id={usr.id}) "
+      usrtxt += f"📣 - [{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
