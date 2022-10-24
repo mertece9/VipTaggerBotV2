@@ -232,6 +232,7 @@ async def mentionall(event):
 @client.on(events.NewMessage(pattern="^/tektag ?(.*)"))
 async def tektag(event):
   global anlik_calisan
+  rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
     return await event.respond(f"{noqrup}")
   
@@ -319,6 +320,7 @@ emoji = " ❤️ 🧡 💛 💚 💙 💜 🖤 🤍 🤎 🙂 🙃 😉 😌 �
 @client.on(events.NewMessage(pattern="^/etag ?(.*)"))
 async def etag(event):
   global anlik_calisan
+  rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
     return await event.respond(f"{noqrup}")
   
