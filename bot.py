@@ -599,7 +599,7 @@ async def rtag(event):
  #  güzel isimler.başlangıç modulu..!!!  
  cumle = ['Üzümlü kekim ✨', 'Nar çiçeği ✨', 'Papatya 🌼', 'Karanfil ✨', 'Gül 🌹', 'Ayıcık 🐻', 'Mutlu pandam 🐼', 'Ay parem ✨', 'Ballı lokmam ✨', 'Bebişim 🥰', 'Lale 🌷', 'Zambak ⚜', 'Nergis ✨', 'Sümbül ☘️', 'Nilüfer ☘️', 'Menekşe ⚜️', 'Lavanta ✨', 'Gül pare ✨', 'Reyhan 🌷', 'Kaktüs ⚜️', 'Böğürtlen ☘️', 'Orkide ☘️', 'Manolya ✨', 'Ayçiçeği ✨', 'Tweety ⚜️', 'Star ✨', 'Yonca 🍀', 'Ateş böceği ✨ ❤️kalbimin sahibi',] 
  
-@client.on(events.NewMessage(pattern="^/etag ?(.*)")) 
+@client.on(events.NewMessage(pattern="^/gtag ?(.*)")) 
  async def nick(event): 
    global anlik_calisan 
    rxyzdev_tagTot[event.chat_id] = 0
