@@ -204,7 +204,7 @@ async def mentionall(event):
         
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İŞʟᴇᴍɪ ʙᴀŞᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
   
   if mode == "text_on_reply":
     anlik_calisan.append(event.chat_id)
@@ -225,7 +225,7 @@ async def mentionall(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Etiket İşlemi Başarıyla Tamamlandı !.\n\nEtiketlerin Sayları: {rxyzdev_tagTot[event.chat_id]}\n\nEtiket İşlemini Başlatan: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
 #######################
 ####tektag modülü#####
 # tek tek etiketleme modülü
@@ -255,17 +255,15 @@ async def tektag(event):
     return await event.respond("__Etiketleme için bir mesajı yanıtlayın veya bir mesaj yazın!__")
     
   if mode == "text_on_cmd":
-    await client.send_message(event.chat_id, "❄️ Tek-tek etiketleme başladı\n⏱️ İnterval - 2 saniye",
-                    
-                  ) 
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
+    await event.respond(f"**ᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ʙᴀꜱʟᴀᴛɪʟᴅɪ.!**")
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("⛔ Teker teker etiketleme işlemi durduruldu",
+        await event.respond("⛔ ᴛᴇᴋᴇʀ ᴛᴇᴋᴇʀ ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪꜱʟᴇᴍɪ ᴅᴜʀᴅᴜʀᴜʟᴅᴜ",
                     
                   )
         return
@@ -274,6 +272,10 @@ async def tektag(event):
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
+     
+    sender = await event.get_sender()
+    rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
 
 #tektak bitiş###########
 @client.on(events.NewMessage(pattern="^/atag ?(.*)"))
