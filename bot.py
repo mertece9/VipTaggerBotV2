@@ -884,18 +884,18 @@ async def eros(event):
   if event.is_private:
     return await event.respond("**Bu Komut Sadace Grublarda ve Kanallarda Kullanıma Bilir**")
   
-  admins = []
-  async for admin in client.iter_participants(event.chat_id):
-    admins.append(admin.id)
-  if not event.sender_id in admins:
-    return await event.respond("**Yalnızca Yöneticiler Etiket işlemini Yapabilir**")
+ # admins = []
+ # async for admin in client.iter_participants(event.chat_id):
+###    admins.append(admin.id)
+#  if not event.sender_id in admins:
+ #   return await event.respond("**Yalnızca Yöneticiler Etiket işlemini Yapabilir**")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
     msg = event.pattern_match.group(1)
-  elif event.reply_to_msg_id:
-    mode = "text_on_reply"
-    msg = event.reply_to_msg_id
+  #elif event.reply_to_msg_id:
+    #mode = "text_on_reply"
+    #msg = event.reply_to_msg_id
     #if msg == None:
         #return await event.respond("**Eski Mesajlar için Üyelerden Bahsedemem! (gruba eklemeden önce gönderilen mesajlar)**")
  # elif event.pattern_match.group(1) and event.reply_to_msg_id:
@@ -910,8 +910,8 @@ async def eros(event):
     #await event.respond(f"**ᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ʙᴀꜱʟᴀᴛɪʟᴅɪ.!**")
         
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
-      rxyzdev_tagTot[event.chat_id] += 1
-      usrnum += 1
+      #rxyzdev_tagTot[event.chat_id] += 1
+      usrnum == 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
