@@ -877,7 +877,7 @@ async def otag(event):
 
 ##########iskambil bitiş###############
  #########eros deneme############
-@client.on(events.NewMessage(pattern="^/eros$"))
+@client.on(events.NewMessage(pattern="^/eros ?(.*)"))
 async def eros(event):
   global anlik_calisan
   rxyzdev_tagTot[event.chat_id] = 0
