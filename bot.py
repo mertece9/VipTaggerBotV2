@@ -876,7 +876,72 @@ async def otag(event):
 
 
 ##########iskambil bitiş###############
+ #########eros deneme############
+@client.on(events.NewMessage(pattern="^/eros"))
+async def eros(event):
+  global anlik_calisan
+  rxyzdev_tagTot[event.chat_id] = 0
+  if event.is_private:
+    return await event.respond("**Bu Komut Sadace Grublarda ve Kanallarda Kullanıma Bilir**")
+  
+  admins = []
+  async for admin in client.iter_participants(event.chat_id):
+    admins.append(admin.id)
+  if not event.sender_id in admins:
+    return await event.respond("**Yalnızca Yöneticiler Etiket işlemini Yapabilir**")
+  
+  if event.pattern_match.group(1):
+    mode = "text_on_cmd"
+    msg = event.pattern_match.group(1)
+  elif event.reply_to_msg_id:
+    mode = "text_on_reply"
+    msg = event.reply_to_msg_id
+    #if msg == None:
+        #return await event.respond("**Eski Mesajlar için Üyelerden Bahsedemem! (gruba eklemeden önce gönderilen mesajlar)**")
+ # elif event.pattern_match.group(1) and event.reply_to_msg_id:
+    #return await event.respond("**Bana Bir Metin Ver!**")
+  #else:
+   # return await event.respond("**Bir Mesajı Yanıtlayın veya Başkalarından Bahsetmem için Bana Bir Betin Verin!!**")
+  
+  if mode == "text_on_cmd":
+    anlik_calisan.append(event.chat_id)
+    usrnum = 0
+    usrtxt = ""
+    #await event.respond(f"**ᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ʙᴀꜱʟᴀᴛɪʟᴅɪ.!**")
+        
+    async for usr in client.iter_participants(event.chat_id, aggressive=False):
+      rxyzdev_tagTot[event.chat_id] += 1
+      usrnum += 1
+      usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
+      if event.chat_id not in anlik_calisan:
+        return
+      if usrnum == 2:
+        await client.send_message(event.chat_id, f"📌 ᴇʀᴏꜱ'ᴜɴ ᴏᴋᴜ ᴀᴛɪʟᴅɪ.\n🔥ᴀꜱɪᴋʟᴀʀ  :\n\n{usrtxt} 💘 {usrtxt}")
+        await asyncio.sleep(3)
+        usrnum = 0
+        usrtxt = ""
+	
+  #if mode == "text_on_reply":
+   # anlik_calisan.append(event.chat_id)
  
+   # usrnum = 0
+   # usrtxt = ""
+   # async for usr in client.iter_participants(event.chat_id, aggressive=False):
+    #  rxyzdev_tagTot[event.chat_id] += 1
+    #  usrnum += 1
+    ##  usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
+    #  if event.chat_id not in anlik_calisan:
+    #    return
+    #  if usrnum == 2:
+    #    await client.send_message(event.chat_id, usrtxt, reply_to=msg)
+     #   await asyncio.sleep(2)
+     #   usrnum = 0
+     #   usrtxt = ""
+     
+	
+###########eros bitiş###############
+
+
 @client.on(events.NewMessage(pattern="^/atag ?(.*)"))
 async def mentionalladmin(event):
   global anlik_calisan
