@@ -229,7 +229,7 @@ async def mentionall(event):
         
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
   
   if mode == "text_on_reply":
     anlik_calisan.append(event.chat_id)
@@ -250,7 +250,7 @@ async def mentionall(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
 #######################
 ####tektag modülü#####
 # tek tek etiketleme modülü
@@ -302,7 +302,7 @@ async def tektag(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
 
   
   if mode == "text_on_reply":
@@ -324,7 +324,7 @@ async def tektag(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
 #######################
 #tektak bitiş###########
 # Emoji ile etiketleme modülü
@@ -390,7 +390,7 @@ async def etag(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
 
   
   if mode == "text_on_reply":
@@ -412,7 +412,7 @@ async def etag(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
 
 
 ##########emoji bitiş###############
@@ -515,7 +515,7 @@ async def stag(event):
 
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
 
   
   if mode == "text_on_reply":
@@ -537,7 +537,7 @@ async def stag(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
 
 
     
@@ -594,7 +594,7 @@ async def rtag(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
 
   
   if mode == "text_on_reply":
@@ -616,7 +616,7 @@ async def rtag(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
 
     
 #############renk bitiş############
@@ -671,7 +671,7 @@ async def gisimtag(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
 
   if mode == "text_on_reply":
     anlik_calisan.append(event.chat_id)
@@ -692,10 +692,100 @@ async def gisimtag(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\n\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
 
 
     ###########isim bitiş#######
+
+# bayrak ile etiketleme modülü
+
+anlik_calisan = []
+
+tekli_calisan = []
+
+
+
+
+bayrak = " 🏁 🚩 🎌 🏴 🏳️ 🏳️‍🌈 🏴‍☠️ 🇦🇨 🇦🇩 🇦🇪 🇦🇫 🇦🇬 🇦🇮 🇦🇱 🇦🇲 🇦🇴 🇦🇷 🇦🇸 🇦🇹 🇦🇺 🇦🇼 🇦🇽 🇦🇿 🇧🇦 🇧🇧 🇧🇩 🇧🇪 🇧🇫 🇧🇬 🇧🇭 🇧🇮 🇧🇯 🇧🇱 🇧🇲 🇧🇳 🇧🇴 🇧🇶 🇧🇷 🇧🇸 🇧🇹 🇧🇻 🇧🇼 🇧🇾 🇧🇿 🇨🇦 🇨🇨 🇨🇩 🇨🇫 🇨🇬 🇨🇭 🇨🇮 " \
+        " 🇨🇰 🇨🇱 🇨🇲 🇨🇳 🇨🇴 🇨🇵 🇨🇷 🇨🇺 🇨🇻 🇨🇼 🇨🇽 🇨🇾 🇨🇿 🇩🇪 🇩🇬 🇩🇯 🇩🇰 🇩🇲 🇩🇴 🇩🇿 🇪🇦 🇪🇨 🇪🇪 🇪🇬 🇪🇭 🇪🇷 🇪🇸 🇪🇹 🇪🇺 🇫🇮 🇫🇯 🇫🇰 🇫🇲 🇫🇴 🇫🇷 🇬🇦 🇬🇧 🇬🇩 🇬🇪 🇬🇫 🇬🇬 🇬🇭 🇬🇮 🇬🇱 🇬🇲 🇬🇳 🇬🇵 🇬🇶 🇬🇷 🇬🇸 🇬🇹 🇬🇺 🇬🇼 🇬🇾 🇭🇰 🇭🇲 🇭🇳 🇭🇷 🇭🇹 🇭🇺 " \
+        " 🇮🇨 🇮🇩 🇮🇪 🇮🇱 🇮🇲 🇮🇳 🇮🇴 🇮🇶 🇮🇷 🇮🇸 🇮🇹 🇯🇪 🇯🇲 🇯🇴 🇯🇵 🇰🇪 🇰🇬 🇰🇭 🇰🇮 🇰🇲 🇰🇳 🇰🇵 🇰🇷 🇰🇼 🇰🇾 🇰🇿 🇱🇦 🇱🇧 🇱🇨 🇱🇮 🇱🇰 🇱🇷 🇱🇸 🇱🇹 🇱🇺 🇱🇻 🇱🇾 🇲🇦 🇲🇨 🇲🇩 🇲🇪 🇲🇫 🇲🇬 🇲🇭 🇲🇰 🇲🇱 🇲🇲 🇲🇳 🇲🇴 🇲🇵 🇲🇶 🇲🇷 🇲🇸 🇲🇹 🇲🇺 🇲🇻 🇲🇼 🇲🇽 🇲🇾 🇲🇿 " \
+        " 🇳🇦 🇳🇨 🇳🇪 🇳🇫 🇳🇬 🇳🇮 🇳🇱 🇳🇴 🇳🇵 🇳🇷 🇳🇺 🇳🇿 🇴🇲 🇵🇦 🇵🇪 🇵🇫 🇵🇬 🇵🇭 🇵🇰 🇵🇱 🇵🇲 🇵🇳 🇵🇷 🇵🇸 🇵🇹 🇵🇼 🇵🇾 🇶🇦 🇷🇪 🇷🇴 🇷🇸 🇷🇺 🇷🇼 🇸🇦 🇸🇧 🇸🇨 🇸🇩 🇸🇪 🇸🇬 🇸🇭 🇸🇮 🇸🇯 🇸🇰 🇸🇱 🇸🇲 🇸🇳 🇸🇴 🇸🇷 🇸🇸 🇸🇹 🇸🇻 🇸🇽 🇸🇾 🇸🇿 🇹🇦 🇹🇨 🇹🇩 🇹🇫 🇹🇬 🇹🇭 " \
+        " 🇹🇯 🇹🇰 🇹🇱 🇹🇲 🇹🇳 🇹🇴 🇹🇷 🇹🇷 🇹🇷 🇹🇷 🇹🇹 🇹🇻 🇹🇼 🇹🇿 🇺🇦 🇺🇬 🇺🇲 🇺🇳 🇺🇸 🇺🇾 🇺🇿 🇻🇦 🇻🇨 🇻🇪 🇻🇬 🇻🇮 🇻🇳 🇻🇺 🇼🇫 🇼🇸 🇽🇰 🇾🇪 🇾🇹 🇿🇦 🇿🇲 🇿🇼 🏴󠁧󠁢󠁥󠁮󠁧󠁿 🏴󠁧󠁢󠁳󠁣󠁴󠁿 🏴 󠁧󠁢󠁷󠁬󠁳󠁿".split(" ")
+
+@client.on(events.NewMessage(pattern="^/btag ?(.*)"))
+async def btag(event):
+  global anlik_calisan
+  rxyzdev_tagTot[event.chat_id] = 0
+  if event.is_private:
+    return await event.respond(f"{noqrup}")
+  
+  admins = []
+  async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
+    admins.append(admin.id)
+  if not event.sender_id in admins:
+    return await event.respond(f"{noadmin}")
+  
+  if event.pattern_match.group(1):
+    mode = "text_on_cmd"
+    msg = event.pattern_match.group(1)
+  elif event.reply_to_msg_id:
+    mode = "text_on_reply"
+    msg = event.reply_to_msg_id
+    if msg == None:
+        return await event.respond("__Eski mesajları göremiyorum! (bu mesaj beni gruba eklemeden önce yazılmış)__")
+  elif event.pattern_match.group(1) and event.reply_to_msg_id:
+    return await event.respond("__Etiketleme mesajı yazmadın!__")
+  else:
+    return await event.respond("__Etiketleme için bir mesajı yanıtlayın veya bir mesaj yazın!__")
+    
+  if mode == "text_on_cmd":
+    anlik_calisan.append(event.chat_id)
+    usrnum = 0
+    usrtxt = ""
+    await event.respond(f"**ᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ʙᴀꜱʟᴀᴛɪʟᴅɪ.!**")
+    async for usr in client.iter_participants(event.chat_id):
+      rxyzdev_tagTot[event.chat_id] += 1
+      usrnum += 1
+      usrtxt += f"[{random.choice(bayrak)}](tg://user?id={usr.id}) "
+      if event.chat_id not in anlik_calisan:
+        await event.respond("⛔ ʙᴀʏʀᴀᴋ ɪʟᴇ ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪꜱʟᴇᴍɪ ᴅᴜʀᴅᴜʀᴜʟᴅᴜ",
+                    
+                  )
+        return
+      if usrnum == 5:
+        await client.send_message(event.chat_id, f"{usrtxt} {msg}")
+        await asyncio.sleep(2)
+        usrnum = 0
+        usrtxt = ""
+     
+    sender = await event.get_sender()
+    rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
+
+  
+  if mode == "text_on_reply":
+    anlik_calisan.append(event.chat_id)
+ 
+    usrnum = 0
+    usrtxt = ""
+    async for usr in client.iter_participants(event.chat_id, aggressive=False):
+      rxyzdev_tagTot[event.chat_id] += 1
+      usrnum += 1
+      usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
+      if event.chat_id not in anlik_calisan:
+        return
+      if usrnum == 5:
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg)
+        await asyncio.sleep(2)
+        usrnum = 0
+        usrtxt = ""
+     
+    sender = await event.get_sender()
+    rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ ᴇᴛɪᴋᴇᴛ İꜱʟᴇᴍɪ ʙᴀꜱᴀʀɪʏʟᴀ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ !.\n\nᴇᴛɪᴋᴇᴛʟᴇɴᴇɴ ꜱᴀʏɪ: {rxyzdev_tagTot[event.chat_id]}\nᴇᴛɪᴋᴇᴛ ɪꜱʟᴇᴍɪɴɪ ʙᴀꜱʟᴀᴛᴀɴ: {rxyzdev_initT}**")
+
+
+##########bayrak bitiş###############
  
 @client.on(events.NewMessage(pattern="^/atag ?(.*)"))
 async def mentionalladmin(event):
@@ -760,7 +850,7 @@ async def mentionalladmin(event):
 
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**Etiket İşlemi Başarıyla Tamamlandı !.\n\n**Etiketlerin Sayları: {rxyzdev_tagTot[event.chat_id]}\n\nEtiket İşlemini Başlatan: {rxyzdev_initT}")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**Etiket İşlemi Başarıyla Tamamlandı !.\n\n**Etiketlerin Sayları: {rxyzdev_tagTot[event.chat_id]}\nEtiket İşlemini Başlatan: {rxyzdev_initT}")
 
 
 
